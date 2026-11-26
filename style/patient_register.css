@@ -1,0 +1,246 @@
+
+:root {
+    --primary-color: #24799a;
+    --primary-hover: #1d6784;
+    --text-color: #172033;
+    --secondary-text: #657184;
+    --muted-text: #8b95a3;
+    --border-color: #e5e9ee;
+    --background-color: #ffffff;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #f1f2f3;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.auth-layout {
+    width: min(100% - 26px, 1440px);
+    min-height: calc(100vh - 26px);
+    margin: 13px auto;
+    display: grid;
+    grid-template-columns: 1fr 0.96fr;
+    background: var(--background-color);
+}
+
+.auth-panel {
+    min-height: 700px;
+    padding: 20px clamp(28px, 5.2vw, 76px) 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.brand-mark {
+    width: 16px;
+    height: 16px;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    color: white;
+    background: var(--primary-color);
+    font-size: 15px;
+}
+
+.form-wrap {
+    width: min(100%, 420px);
+    margin: auto;
+    padding: 34px 0;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    margin-bottom: 13px;
+}
+
+h1 {
+    font-size: clamp(25px, 2.1vw, 34px);
+    line-height: 1.15;
+    letter-spacing: -.035em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--secondary-text);
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+form input {
+    width: 100%;
+    height: 39px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    outline: none;
+    padding: 0 11px;
+    margin-bottom: 18px;
+    color: var(--text-color);
+    background: white;
+    font-size: 11px;
+}
+
+form input::placeholder {
+    color: var(--muted-text);
+}
+
+form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(36, 121, 154, .09);
+}
+
+.forgot-link {
+    align-self: flex-end;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 9px;
+    margin: -8px 0 22px;
+}
+
+.primary-btn {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.primary-btn:hover {
+    background: var(--primary-hover);
+}
+
+.helper-text,
+.staff-link {
+    color: var(--secondary-text);
+    font-size: 10px;
+    margin-top: 17px;
+}
+
+.switch-link {
+    color: var(--primary-color);
+    font-size: 10px;
+    margin-top: 26px;
+}
+
+.switch-link a,
+.staff-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.staff-link {
+    margin-top: 20px;
+}
+
+.copyright {
+    color: var(--secondary-text);
+    font-size: 9px;
+    margin-top: auto;
+}
+
+.visual-panel {
+    position: relative;
+    min-height: 620px;
+    height: 700px;
+
+    margin: 20px 20px 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15, 25, 40, 0.25),
+            rgba(15, 25, 40, 0.05)
+        ),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0")
+        center / cover no-repeat;
+}
+
+.visual-copy {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    padding: 20px 22px;
+    border-radius: 8px;
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.visual-copy h2 {
+    font-size: 23px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.visual-copy p {
+    color: var(--secondary-text);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+    .auth-layout {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .auth-panel {
+        min-height: 100vh;
+        padding: 22px 25px;
+    }
+
+    .form-wrap {
+        margin: auto;
+    }
+
+    .visual-panel {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .auth-panel {
+        padding-inline: 19px;
+    }
+}

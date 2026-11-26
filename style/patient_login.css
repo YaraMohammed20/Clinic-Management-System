@@ -1,0 +1,330 @@
+
+/* =========================
+   General
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #24799a;
+    --primary-hover: #1d6784;
+    --text-color: #172033;
+    --secondary-text: #657184;
+    --muted-text: #8b95a3;
+    --border-color: #e5e9ee;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f2f3;
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* =========================
+   Layout
+========================= */
+
+.auth-layout {
+    width: min(100% - 26px, 1440px);
+    min-height: calc(100vh - 26px);
+    margin: 13px auto;
+    display: grid;
+    grid-template-columns: 1fr 0.96fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* =========================
+   Form Card
+========================= */
+
+.auth-panel {
+    min-height: 650px;
+    padding: 28px clamp(28px, 5vw, 70px);
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+/* =========================
+   Brand
+========================= */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    width: fit-content;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-size: 23px;
+}
+
+/* =========================
+   Form Content
+========================= */
+
+.form-wrap {
+    width: 100%;
+    max-width: 390px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: clamp(26px, 2.2vw, 34px);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--secondary-text);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   Form
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form label {
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 100%;
+    height: 43px;
+    padding: 0 13px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    outline: none;
+    background: #fff;
+    color: var(--text-color);
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+form input::placeholder {
+    color: #a5afba;
+}
+
+form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(36, 121, 154, 0.10);
+}
+
+/* =========================
+   Forgot Password
+========================= */
+
+.forgot-link {
+    align-self: flex-end;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: -7px;
+    margin-bottom: 20px;
+}
+
+.forgot-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* =========================
+   Button
+========================= */
+
+.primary-btn {
+    width: 100%;
+    min-height: 43px;
+    border: none;
+    border-radius: 7px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 5px 15px rgba(36, 121, 154, 0.15);
+}
+
+.primary-btn:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   Account Links
+========================= */
+
+.switch-link,
+.staff-link {
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.switch-link {
+    color: var(--secondary-text);
+    margin-top: 20px;
+}
+
+.staff-link {
+    color: var(--muted-text);
+    margin-top: 12px;
+}
+
+.switch-link a,
+.staff-link a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.switch-link a:hover,
+.staff-link a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* =========================
+   Copyright
+========================= */
+
+.copyright {
+    color: var(--muted-text);
+    font-size: 10px;
+    margin-top: auto;
+}
+
+/* =========================
+   Image Card
+========================= */
+
+.visual-panel {
+    position: relative;
+    min-height: 610px;
+    margin: 18px 18px 18px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(10, 35, 50, 0.75),
+            rgba(10, 35, 50, 0.05)
+        ),
+        url("https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=85")
+        center / cover no-repeat;
+}
+
+.visual-copy {
+    max-width: 390px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.visual-copy h2 {
+    font-size: clamp(25px, 2.5vw, 36px);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.visual-copy p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+    .auth-layout {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .auth-panel {
+        min-height: calc(100vh - 26px);
+        padding: 28px 8%;
+    }
+
+    .visual-panel {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-layout {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+    }
+
+    .auth-panel {
+        padding: 24px 22px;
+    }
+
+    .brand {
+        font-size: 19px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .form-wrap {
+        padding: 25px 0;
+    }
+}
