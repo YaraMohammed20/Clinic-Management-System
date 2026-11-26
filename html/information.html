@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinic Information | Carewell</title>
+
+    <link rel="stylesheet" href="../style/information.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+             <a class="brand" href="../index.html">
+                 <div class="brand-icon">+</div>
+                <h2>Carewell</h2>
+            </a>
+
+            <p class="sidebar-heading">CLINIC MANAGEMENT</p>
+
+            <nav class="navigation">
+                <a href="../index.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    Overview
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">♧</span>
+                    Doctors
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">♙</span>
+                    Patients
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    Reservations
+                </a>
+
+                <a href="information.html" class="nav-link active">
+                    <span class="nav-icon">ⓘ</span>
+                    Clinic information
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="clinic-details">
+                    <strong>Carewell Clinic</strong>
+                    <span>Mon–Fri · 08:00–18:00</span>
+                </div>
+
+                <a href="./staff_login.html" class="sign-out">
+                    <span>⇥</span> Sign out
+                </a>
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <div class="breadcrumb">
+                    Workspace <span>/</span> Admin
+                </div>
+
+                <div class="admin-info">
+                    <strong>admin</strong>
+                    <span>Administrator</span>
+                </div>
+
+            </header>
+
+            <!-- Page Content -->
+            <section class="page-content">
+
+                <div class="page-header">
+
+                    <div>
+                        <h1>Clinic information</h1>
+                        <p>Manage your clinic’s identity and opening hours.</p>
+                    </div>
+
+                    <div class="header-actions">
+                        <button type="button" id="discardBtn" class="btn btn-discard">
+                            Discard changes
+                        </button>
+
+                        <button type="button" id="saveBtn" class="btn btn-save">
+                            Save changes
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="content-grid">
+
+                    <!-- Clinic Identity Card -->
+                    <section class="card identity-card">
+
+                        <h2>Clinic identity</h2>
+
+                        <!-- Logo Upload -->
+                        <div class="logo-section">
+
+                            <div class="logo-preview" id="logoPreview">
+                                <span>+</span>
+                            </div>
+
+                            <div class="upload-area">
+                                <label for="logoInput" class="upload-btn">
+                                    Upload logo
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="logoInput"
+                                    accept="image/png, image/svg+xml"
+                                    hidden
+                                >
+
+                                <p>PNG or SVG · Up to 5 MB</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Clinic Name -->
+                        <div class="form-group">
+                            <label for="clinicName">Clinic name</label>
+
+                            <input
+                                type="text"
+                                id="clinicName"
+                                value="Carewell Clinic"
+                                placeholder="Enter clinic name"
+                            >
+                        </div>
+
+                        <!-- Description -->
+                        <textarea
+                            id="clinicDescription"
+                            class="clinic-description"
+                            placeholder="Enter clinic description"
+                        >A welcoming space for better health.</textarea>
+
+                        <div class="identity-divider"></div>
+
+                        <!-- Visibility Information -->
+                        <div class="visibility-section">
+
+                            <h3>Visible to everyone</h3>
+
+                            <p>
+                                Doctors and patients can view the clinic name,
+                                logo, and opening hours from their portals.
+                                Only administrators can edit this information.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Working Hours Card -->
+                    <section class="card hours-card">
+
+                        <div class="hours-header">
+                            <h2>Working hours</h2>
+                            <p>Set the hours your clinic welcomes patients.</p>
+                        </div>
+
+                        <!-- Working Hours Table -->
+                        <div class="hours-table">
+
+                            <div class="hours-row table-heading">
+                                <span>DAY</span>
+                                <span>OPENS</span>
+                                <span>CLOSES</span>
+                            </div>
+
+                            <!-- Monday -->
+                            <div class="hours-row">
+                                <label>Monday</label>
+                                <select class="open-time">
+                                    <option>08:00</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                </select>
+                                <select class="close-time">
+                                    <option>18:00</option>
+                                    <option>17:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                </select>
+                            </div>
+
+                            <!-- Tuesday -->
+                            <div class="hours-row">
+                                <label>Tuesday</label>
+                                <select class="open-time">
+                                    <option>08:00</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                </select>
+                                <select class="close-time">
+                                    <option>18:00</option>
+                                    <option>17:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                </select>
+                            </div>
+
+                            <!-- Wednesday -->
+                            <div class="hours-row">
+                                <label>Wednesday</label>
+                                <select class="open-time">
+                                    <option>08:00</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                </select>
+                                <select class="close-time">
+                                    <option>18:00</option>
+                                    <option>17:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                </select>
+                            </div>
+
+                            <!-- Thursday -->
+                            <div class="hours-row">
+                                <label>Thursday</label>
+                                <select class="open-time">
+                                    <option>08:00</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                </select>
+                                <select class="close-time">
+                                    <option>18:00</option>
+                                    <option>17:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                </select>
+                            </div>
+
+                            <!-- Friday -->
+                            <div class="hours-row">
+                                <label>Friday</label>
+                                <select class="open-time">
+                                    <option>08:00</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                </select>
+                                <select class="close-time">
+                                    <option>18:00</option>
+                                    <option>17:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                </select>
+                            </div>
+
+                            <!-- Saturday -->
+                            <div class="hours-row">
+                                <label>Saturday</label>
+                                <select class="open-time">
+                                    <option>09:00</option>
+                                    <option>08:00</option>
+                                    <option>10:00</option>
+                                </select>
+                                <select class="close-time">
+                                    <option>13:00</option>
+                                    <option>14:00</option>
+                                    <option>15:00</option>
+                                    <option>18:00</option>
+                                </select>
+                            </div>
+
+                            <!-- Sunday -->
+                            <div class="hours-row">
+                                <label>Sunday</label>
+                                <select class="open-time sunday-open">
+                                    <option value="Closed">Closed</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                </select>
+
+                                <select class="close-time sunday-close" disabled>
+                                    <option value="">—</option>
+                                    <option>13:00</option>
+                                    <option>18:00</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <p class="hours-note">
+                            Doctor availability is managed within clinic opening hours.
+                        </p>
+
+                    </section>
+
+                </div>
+
+                <p id="statusMessage" class="status-message"></p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/information.js"></script>
+
+</body>
+</html>
