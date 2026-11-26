@@ -20,3 +20,4 @@ Under Development
 ## Contributors
 - Frontend Developer 1: Yara Mohammed
 - Frontend Developer 2: Hania Hany
+- Frontend Developer 3: Mark Wageeh
