@@ -1,0 +1,191 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients | Carewell</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+    <body>
+        <div class="app">
+
+            <aside class="sidebar">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <span>Carewell</span>
+                </div>
+
+                <p class="sidebar-label">CLINIC MANAGEMENT</p>
+
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span>Overview</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Doctors</span>
+                    </a>
+
+                    <a href="patients.html" class="nav-link active">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>Patients</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Reservations</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <span>Clinic information</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-bottom">
+                    <div class="clinic-info">
+                        <strong>Carewell Clinic</strong>
+                        <p>Mon-Fri 08:00-18:00</p>
+                    </div>
+
+                    <a href="#" class="nav-link signout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Sign out</span>
+                    </a>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <header class="topbar">
+                    <div class="breadcrumb">
+                        <span>Workspace</span>
+                        <span>/</span>
+                        <span>Admin</span>
+                    </div>
+
+                    <div class="admin-info">
+                        <strong>Alex Morgan</strong>
+                        <small>Administrator</small>
+                    </div>
+                </header>
+
+                <section class="page-content">
+                    <div class="page-heading">
+                        <div>
+                            <h1>Patients</h1>
+                            <p>Keep every patient's information organized and up to date.</p>
+                        </div>
+                    </div>
+
+                    <div class="patients-header">
+                        <h2>
+                            patients <span class="dot">.</span>
+                            <span id="patientCount">0</span>
+                        </h2>
+
+                        <button class="primary-btn" id="addPatientBtn">
+                            <i class="fa-solid fa-plus"></i>
+                             Add patient
+                        </button>
+                    </div>
+
+                    <div class="filter-box">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search patients by name or patient ID"
+                             >
+                        </div>
+
+                <select id="dateFilter">
+                    <option value="all">Joined: All dates</option>
+                    <option value="2025">Joined: 2025</option>
+                    <option value="2024">Joined: 2024</option>
+                    <option value="2023">Joined: 2023</option>
+                    <option value="2022">Joined: 2022</option>
+                    <option value="2021">Joined: 2021</option>
+                </select>
+              </div>
+
+              <div class="table-container">
+                <table class="patients-table">
+                    
+                    <thead>
+                        <tr>
+                            <th>Patient</th>
+                            <th>Birth date</th>
+                            <th>Age</th>
+                            <th>Joined clinic</th>
+                            <th>Next visit</th>
+                            <th>Next visit Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="patientsTableBody"></tbody>
+                </table>
+
+                <div id="emptyMessage" class="empty-message hidden">
+                    No patients found.
+                </div>
+
+                <div class="mobile-patients" id="mobilePatients"></div>
+              </div>
+                </section>
+            </main>
+        </div>
+
+        <div class="modal-overly hidden" id="addPatientModal">
+
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>Add patient</h2>
+                    <button class="close-btn" id="closeModal">&times;</button>
+                </div>
+
+                <form id="addPatientForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="required">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Birth Date</label>
+                        <input type="date" name="joinDate" required>
+                    </div>
+                    
+            <div class="form-group">
+                <label>Clinic joining date</label>
+                <input type="date" name="joinDate" required>
+            </div>
+
+            <div class="form-group">
+                <label>Next visit date</label>
+                <input type="date" name="nextVisit">
+            </div>
+
+            <div class="form-group">
+                <label>Next visit time</label>
+                <input type="time" name="nextVisitTime">
+            </div>
+
+            <button type="submit" class="primary-btn full-width">
+                Add patient
+            </button>
+
+                </form>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
