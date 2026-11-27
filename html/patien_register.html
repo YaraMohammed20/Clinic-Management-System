@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Carewell</title>
+    <link rel="stylesheet" href="../style/patient_register.css">
+</head>
+<body>
+
+    <main class="auth-layout">
+
+        <section class="auth-panel">
+
+            <a class="brand" href="../index.html">
+                <span class="brand-mark">+</span>
+                <span>Carewell</span>
+            </a>
+
+            <div class="form-wrap">
+
+                <p class="eyebrow">PATIENT PORTAL</p>
+
+                <h1>Create your account</h1>
+
+                <p class="subtitle">
+                    Join Carewell Clinic and book your first visit.
+                </p>
+
+                <form id="registerForm">
+
+                    <label for="fullName">Full name</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                    <label for="birthDate">Birth date</label>
+                    <input
+                        type="date"
+                        id="birthDate"
+                        required
+                    >
+
+                    <label for="email">Email address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        required
+                    >
+
+                    <small>
+                        Use at least 8 characters, including a number.
+                    </small>
+
+                    <button type="submit" class="primary-btn">
+                        Create account
+                    </button>
+
+                </form>
+
+                <p class="switch-link">
+                    Already have an account?
+                    <a href="patient_login.html">Log in</a>
+                </p>
+
+            </div>
+
+            <p class="copyright">© 2026 Carewell Clinic</p>
+
+        </section>
+
+        <aside class="visual-panel">
+
+            <div class="visual-copy">
+                <h2>Better care.<br>Closer to you.</h2>
+                <p>
+                    A simple way to connect patients, doctors,
+                    and the care that matters.
+                </p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <script src="../js/patient_register.js"></script>
+</body>
+</html>
